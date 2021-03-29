@@ -3,11 +3,9 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const todoDB = require(__dirname + '/dbs/TodoDB');
 const _ = require("lodash");
-
 const app = express();
 
 app.set('view engine', 'ejs');
-
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
@@ -20,7 +18,6 @@ app.use(express.static("public"));
 app.get("/", function (req, res) {
 
     todoDB.Item.find({}, function (err, foundItems) {
-
         if (foundItems.length === 0) {
             todoDB.Item.insertMany(defaultItems, function (err) {
                 if (err) {

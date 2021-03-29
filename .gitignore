@@ -124,3 +124,6 @@ dist
 
 # Local History for Visual Studio Code
 .history/
+
+#file system
+.DS_Store
