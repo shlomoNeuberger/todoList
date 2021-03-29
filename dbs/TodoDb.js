@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/todolistDB", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect("mongodb+srv://admin-shlomo:<Password>@cluster0.mdnht.mongodb.net/todolistDB?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
 const itemsSchema = {
     name: String
 };
@@ -28,7 +28,7 @@ const defaultItems = [item1, item2, item3];
 
 exports.Item = Item
 exports.List = List
-
+exports.defaultItems = defaultItems
 exports.DeleteItemById = (id) => {
 
 }

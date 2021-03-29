@@ -19,7 +19,7 @@ app.get("/", function (req, res) {
 
     todoDB.Item.find({}, function (err, foundItems) {
         if (foundItems.length === 0) {
-            todoDB.Item.insertMany(defaultItems, function (err) {
+            todoDB.Item.insertMany(todoDB.defaultItems, function (err) {
                 if (err) {
                     console.log(err);
                 } else {
