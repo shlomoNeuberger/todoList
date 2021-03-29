@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/todolistDB", { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect("<Databse Link>", { useNewUrlParser: true, useUnifiedTopology: true });
 const itemsSchema = {
     name: String
 };
